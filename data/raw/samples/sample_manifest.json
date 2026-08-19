@@ -1,0 +1,43 @@
+{
+  "created_at_utc": "2026-07-26T23:26:45.074711+00:00",
+  "results": {
+    "osm_boundary": {
+      "status": "ok",
+      "path": "data/raw/samples/boundaries/rabat_commune.geojson"
+    },
+    "open_meteo": {
+      "status": "ok",
+      "path": "data/raw/samples/weather/open_meteo_sample_2024-07-01_2024-07-07.json"
+    },
+    "landsat_stac": {
+      "status": "ok",
+      "path": "data/raw/samples/landsat/stac_sample_2024_summer.json"
+    }
+  },
+  "files": [
+    {
+      "path": "data/raw/samples/boundaries/rabat_commune.geojson",
+      "source_id": "osm_boundary",
+      "generated": false,
+      "bytes": 18337,
+      "sha256": "012df85c8d6dbf447372554ce886dc7bd4671096727a0bc2032ed352a42c61e6",
+      "recorded_at_utc": "2026-07-26T23:26:32.129509+00:00"
+    },
+    {
+      "path": "data/raw/samples/weather/open_meteo_sample_2024-07-01_2024-07-07.json",
+      "source_id": "open_meteo",
+      "generated": false,
+      "bytes": 13890,
+      "sha256": "8bf3a232dda433b5891a4cc7b32aa5ae3abc194aee8fc3b97ea1a0e580c39a67",
+      "recorded_at_utc": "2026-07-26T23:26:36.020964+00:00"
+    },
+    {
+      "path": "data/raw/samples/landsat/stac_sample_2024_summer.json",
+      "source_id": "landsat_stac",
+      "generated": false,
+      "bytes": 14940,
+      "sha256": "2a42f00703da2580b9a459ed5e1bb088078a0c84df27af3c80c654c117082ca1",
+      "recorded_at_utc": "2026-07-26T23:26:45.074711+00:00"
+    }
+  ]
+}

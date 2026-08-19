@@ -1,0 +1,666 @@
+{
+  "request_url": "https://landsatlook.usgs.gov/stac-server/search",
+  "search": {
+    "collections": [
+      "landsat-c2l2-st"
+    ],
+    "bbox": [
+      -6.93,
+      33.89,
+      -6.73,
+      34.06
+    ],
+    "datetime": "2024-06-01T00:00:00Z/2024-09-30T23:59:59Z",
+    "limit": 20,
+    "query": {
+      "eo:cloud_cover": {
+        "lte": 35
+      }
+    }
+  },
+  "downloaded_at_utc": "2026-07-26T23:26:45.041708+00:00",
+  "matched": null,
+  "returned": 20,
+  "items": [
+    {
+      "id": "LC09_L2SP_201037_20240925_20241001_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-09-25T10:57:22.565624Z",
+      "cloud_cover": 0.61,
+      "bbox": [
+        -7.1072430782290414,
+        32.119552961749974,
+        -4.682559517026984,
+        34.22051622881119
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC08_L2SP_202037_20240924_20240928_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-09-24T11:03:38.389807Z",
+      "cloud_cover": 7.03,
+      "bbox": [
+        -8.665690833134107,
+        32.12057950127654,
+        -6.247113745899943,
+        34.22292108826819
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC08_L2SP_202036_20240924_20240928_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-09-24T11:03:14.498768Z",
+      "cloud_cover": 15.06,
+      "bbox": [
+        -8.28753859262454,
+        33.552992107757376,
+        -5.823974343672795,
+        35.657543748378295
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC08_L2SP_201037_20240917_20240921_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-09-17T10:57:30.061200Z",
+      "cloud_cover": 2.24,
+      "bbox": [
+        -7.135420819775454,
+        32.1208396170442,
+        -4.717596779555931,
+        34.22291933014853
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC08_L2SP_201036_20240917_20240921_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-09-17T10:57:06.170159Z",
+      "cloud_cover": 20.46,
+      "bbox": [
+        -6.757714871804046,
+        33.553481215207285,
+        -4.293428186658013,
+        35.657487812113736
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC09_L2SP_202037_20240916_20240917_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-09-16T11:03:35.043718Z",
+      "cloud_cover": 10.88,
+      "bbox": [
+        -8.671767296367538,
+        32.11921596602362,
+        -6.246185455764359,
+        34.22052387888102
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC09_L2SP_201037_20240909_20240910_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-09-09T10:57:20.846892Z",
+      "cloud_cover": 0.72,
+      "bbox": [
+        -7.123830657771181,
+        32.119537917639946,
+        -4.699089658612726,
+        34.22056071262251
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC09_L2SP_201036_20240909_20240910_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-09-09T10:56:56.951641Z",
+      "cloud_cover": 0.34,
+      "bbox": [
+        -6.746271294264486,
+        33.552395825860465,
+        -4.2749390504049165,
+        35.65537375823962
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC08_L2SP_202036_20240908_20240914_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-09-08T11:03:15.187905Z",
+      "cloud_cover": 22.82,
+      "bbox": [
+        -8.305393088436663,
+        33.55284706199995,
+        -5.841780956828863,
+        35.65744381619525
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC08_L2SP_201037_20240901_20240906_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-09-01T10:57:24.223627Z",
+      "cloud_cover": 0.84,
+      "bbox": [
+        -7.133509705752174,
+        32.120872948311515,
+        -4.715652054445678,
+        34.22324792838367
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC08_L2SP_201036_20240901_20240906_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-09-01T10:57:00.328351Z",
+      "cloud_cover": 11.93,
+      "bbox": [
+        -6.755783267583899,
+        33.55377518896044,
+        -4.291783564983849,
+        35.65782122550846
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC09_L2SP_201037_20240824_20240825_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-08-24T10:57:19.920561Z",
+      "cloud_cover": 0.36,
+      "bbox": [
+        -7.1493485700628145,
+        32.11963537544036,
+        -4.724705674783954,
+        34.22060850427309
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC09_L2SP_201036_20240824_20240825_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-08-24T10:56:56.025309Z",
+      "cloud_cover": 2.43,
+      "bbox": [
+        -6.771559502348539,
+        33.552295666835796,
+        -4.3003363275795685,
+        35.65522547459056
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC08_L2SP_202037_20240823_20240830_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-08-23T11:03:30.645942Z",
+      "cloud_cover": 1.52,
+      "bbox": [
+        -8.673037801900623,
+        32.120180157281325,
+        -6.254895811037473,
+        34.22269645223969
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC08_L2SP_202036_20240823_20240830_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-08-23T11:03:06.750666Z",
+      "cloud_cover": 4.93,
+      "bbox": [
+        -8.295004088530538,
+        33.55289563530995,
+        -5.83154965145828,
+        35.657611613608886
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC08_L2SP_201037_20240816_20240822_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-08-16T10:57:15.908579Z",
+      "cloud_cover": 0,
+      "bbox": [
+        -7.122973798928342,
+        32.120779781807784,
+        -4.705598891514841,
+        34.22302967433908
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC08_L2SP_201036_20240816_20240822_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-08-16T10:56:52.013304Z",
+      "cloud_cover": 0.21,
+      "bbox": [
+        -6.745058511272588,
+        33.5533843155523,
+        -4.2812261725087355,
+        35.65757925943858
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC09_L2SP_202037_20240815_20240816_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-08-15T11:03:20.308998Z",
+      "cloud_cover": 0.01,
+      "bbox": [
+        -8.66921257859916,
+        32.11917055912294,
+        -6.243594375378617,
+        34.220779830334855
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC09_L2SP_202036_20240815_20240816_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-08-15T11:02:56.422218Z",
+      "cloud_cover": 0.94,
+      "bbox": [
+        -8.291453799761468,
+        33.55130067884254,
+        -5.820414792184954,
+        35.65487174694754
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "LC09_L2SP_201037_20240808_20240809_02_T1_ST",
+      "collection": "landsat-c2l2-st",
+      "datetime": "2024-08-08T10:57:05.045169Z",
+      "cloud_cover": 0.34,
+      "bbox": [
+        -7.120657828278039,
+        32.119598490934195,
+        -4.695200230181914,
+        34.22066778043372
+      ],
+      "asset_keys": [
+        "ANG.txt",
+        "ATRAN",
+        "CDIST",
+        "DRAD",
+        "EMIS",
+        "EMSD",
+        "MTL.json",
+        "MTL.txt",
+        "MTL.xml",
+        "TRAD",
+        "URAD",
+        "index",
+        "lwir11",
+        "qa",
+        "qa_pixel",
+        "qa_radsat",
+        "reduced_resolution_browse",
+        "thumbnail"
+      ]
+    }
+  ]
+}

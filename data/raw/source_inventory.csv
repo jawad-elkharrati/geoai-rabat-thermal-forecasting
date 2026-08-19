@@ -1,0 +1,7 @@
+source_id,name,role,official_url,access_method,spatial_resolution,temporal_resolution,license_or_terms,status_week2
+landsat_c2_l2_st,Landsat 8/9 Collection 2 Level-2 ST,target LST and QA,https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-temperature,USGS LandsatLook STAC,30 m,16 days,USGS public domain,sample_acquired
+sentinel2_l2a,Sentinel-2 Level-2A,NDVI NDBI water indices,https://documentation.dataspace.copernicus.eu/Data/SentinelMissions/Sentinel2.html,Copernicus Data Space API,10-20 m,5 days,Copernicus data terms,documented
+osm,OpenStreetMap,buildings roads parks water and boundary,https://www.openstreetmap.org/copyright,Nominatim and Overpass,vector,current snapshot,ODbL 1.0,urban_features_acquired
+cop_dem_glo30,Copernicus DEM GLO-30,elevation and slope,https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM,Copernicus Data Space STAC,30 m,static,Copernicus DEM licence,documented
+era5_land,ERA5-Land hourly data,historical weather,https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land,Open-Meteo archive with model=era5_land,0.1 degree,hourly,Copernicus C3S terms,historical_acquired
+open_meteo,Open-Meteo Forecast API,J+1 and J+2 weather,https://open-meteo.com/en/docs,REST JSON,model-dependent,hourly,provider and upstream terms,sample_acquired

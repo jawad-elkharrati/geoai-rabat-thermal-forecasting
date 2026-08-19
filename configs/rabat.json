@@ -1,0 +1,91 @@
+{
+  "project": {
+    "name": "geoai-rabat",
+    "random_seed": 42,
+    "timezone": "Africa/Casablanca"
+  },
+  "study_area": {
+    "name": "Commune de Rabat",
+    "country": "Morocco",
+    "bbox_wgs84": [-6.93, 33.89, -6.73, 34.06],
+    "centroid_wgs84": [-6.8374, 33.9777],
+    "boundary_source": "OpenStreetMap / Nominatim",
+    "boundary_query": "Rabat, Maroc",
+    "osm_relation_id": 2799215,
+    "boundary_area_km2_estimate": 115.77
+  },
+  "grid": {
+    "crs": "EPSG:32629",
+    "resolution_m": 30,
+    "estimated_cells_min": 120000,
+    "estimated_cells_max": 140000,
+    "demo_rows": 42,
+    "demo_cols": 56
+  },
+  "history": {
+    "start_date": "2019-01-01",
+    "end_date": "2025-12-31",
+    "demo_dates": [
+      "2019-06-24",
+      "2019-08-11",
+      "2020-06-10",
+      "2020-07-28",
+      "2021-06-29",
+      "2021-08-16",
+      "2022-06-16",
+      "2022-07-18",
+      "2022-08-19",
+      "2023-06-03",
+      "2023-07-21",
+      "2023-08-22",
+      "2024-06-21",
+      "2024-07-23",
+      "2024-08-24",
+      "2025-06-08",
+      "2025-07-26",
+      "2025-08-27"
+    ]
+  },
+  "quality": {
+    "max_scene_cloud_percent": 35,
+    "landsat_excluded_qa_bits": [0, 1, 2, 3, 4, 5],
+    "lst_valid_min_c": 10,
+    "lst_valid_max_c": 70,
+    "max_feature_missing_percent": 20
+  },
+  "dataset": {
+    "target": "lst_c",
+    "id_columns": ["pixel_id", "date", "x_m", "y_m", "lon", "lat"],
+    "test_dates_reserved": 2,
+    "validation_fraction_dates": 0.2
+  },
+  "models": {
+    "random_forest": {
+      "n_estimators": 36,
+      "max_depth": 9,
+      "min_samples_leaf": 12,
+      "n_jobs": -1
+    },
+    "hist_gradient_boosting": {
+      "max_iter": 55,
+      "learning_rate": 0.06,
+      "max_leaf_nodes": 8,
+      "l2_regularization": 0.2
+    },
+    "xgboost": {
+      "n_estimators": 220,
+      "learning_rate": 0.05,
+      "max_depth": 7,
+      "subsample": 0.85,
+      "colsample_bytree": 0.85,
+      "n_jobs": 4
+    }
+  },
+  "paths": {
+    "raw": "data/raw",
+    "interim": "data/interim",
+    "processed": "data/processed",
+    "artifacts": "artifacts/week5",
+    "figures": "reports/figures"
+  }
+}

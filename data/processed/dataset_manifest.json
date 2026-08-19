@@ -1,0 +1,59 @@
+{
+  "dataset_kind": "synthetic_geospatial_demo",
+  "scientific_validation": false,
+  "created_at_utc": "2026-07-27T13:30:38.905185+00:00",
+  "random_seed": 42,
+  "crs": "EPSG:32629",
+  "nominal_resolution_m": 30,
+  "rows": 25721,
+  "files": [
+    {
+      "path": "data/processed/pixel_date_demo.parquet",
+      "source_id": "demo_generator",
+      "generated": true,
+      "bytes": 489918,
+      "sha256": "fa1340fcdaa882933855904481406bec22e5eff7b938bee33b60ce2a2b5706c8",
+      "recorded_at_utc": "2026-07-27T13:30:38.833029+00:00"
+    },
+    {
+      "path": "data/processed/pixel_date_demo_sample.csv",
+      "source_id": "demo_generator",
+      "generated": true,
+      "bytes": 256180,
+      "sha256": "2b54c0b2a3e3de870e536ee4e0309ec5ae300f88c42474135b93d91cf693716f",
+      "recorded_at_utc": "2026-07-27T13:30:38.857324+00:00"
+    },
+    {
+      "path": "data/processed/static_grid_demo.parquet",
+      "source_id": "demo_generator",
+      "generated": true,
+      "bytes": 59466,
+      "sha256": "efde861f9ddbe3df21b9b9e3d08409ebe172e5cf8985a4087bc38692c0370e85",
+      "recorded_at_utc": "2026-07-27T13:30:38.878852+00:00"
+    },
+    {
+      "path": "data/processed/weather_demo.csv",
+      "source_id": "demo_generator",
+      "generated": true,
+      "bytes": 1416,
+      "sha256": "c431939798b68c1735442bc01ac6ea900ffa7e11d3eabbddd6a210f367b23cb1",
+      "recorded_at_utc": "2026-07-27T13:30:38.884041+00:00"
+    },
+    {
+      "path": "data/processed/data_dictionary.csv",
+      "source_id": "project_schema",
+      "generated": true,
+      "bytes": 1521,
+      "sha256": "ef8b4d73e97f209df4b9526b7cd4f2c7d5bd3d643ea58b68c9b40f5a0fdd1002",
+      "recorded_at_utc": "2026-07-27T13:30:38.886059+00:00"
+    },
+    {
+      "path": "data/processed/quality_audit.json",
+      "source_id": "quality_audit",
+      "generated": true,
+      "bytes": 4969,
+      "sha256": "c5c9cf3b2bb27f9ebdb8ccc7d4fbd0ab01f655496edec2e44adf59765119eaff",
+      "recorded_at_utc": "2026-07-27T13:30:38.905185+00:00"
+    }
+  ]
+}

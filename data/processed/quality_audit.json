@@ -1,0 +1,187 @@
+{
+  "status": "ok",
+  "issues": [],
+  "rows": 25721,
+  "unique_pixels": 1854,
+  "dates": 18,
+  "date_min": "2019-06-24",
+  "date_max": "2025-08-27",
+  "duplicate_pixel_date_keys": 0,
+  "missing_percent": {
+    "pixel_id": 0.0,
+    "date": 0.0,
+    "x_m": 0.0,
+    "y_m": 0.0,
+    "lon": 0.0,
+    "lat": 0.0,
+    "elevation_m": 0.0,
+    "slope_deg": 0.0,
+    "ndvi": 0.8048,
+    "ndbi": 0.8981,
+    "building_density": 0.0,
+    "road_density": 0.0,
+    "impervious_fraction": 0.0,
+    "distance_to_water_m": 0.0,
+    "distance_to_park_m": 0.0,
+    "air_temperature_c": 0.0,
+    "relative_humidity_pct": 0.0,
+    "wind_speed_ms": 0.0,
+    "shortwave_radiation_wm2": 0.0,
+    "day_of_year_sin": 0.0,
+    "day_of_year_cos": 0.0,
+    "landsat_cloud_fraction": 0.0,
+    "lst_c": 0.0
+  },
+  "target_summary_c": {
+    "min": 24.793903350830078,
+    "mean": 36.87746047973633,
+    "max": 47.93772888183594,
+    "std": 3.517399549484253
+  },
+  "by_date": [
+    {
+      "date": "2019-06-24T00:00:00",
+      "rows": 1729,
+      "pixels": 1729,
+      "lst_mean_c": 36.92583084106445,
+      "lst_std_c": 3.151474714279175,
+      "cloud_fraction": 0.0674217939376831
+    },
+    {
+      "date": "2019-08-11T00:00:00",
+      "rows": 1311,
+      "pixels": 1311,
+      "lst_mean_c": 33.89192581176758,
+      "lst_std_c": 3.24573016166687,
+      "cloud_fraction": 0.29288026690483093
+    },
+    {
+      "date": "2020-06-10T00:00:00",
+      "rows": 1691,
+      "pixels": 1691,
+      "lst_mean_c": 35.53823471069336,
+      "lst_std_c": 3.0225605964660645,
+      "cloud_fraction": 0.08791801333427429
+    },
+    {
+      "date": "2020-07-28T00:00:00",
+      "rows": 1223,
+      "pixels": 1223,
+      "lst_mean_c": 39.0703125,
+      "lst_std_c": 2.9312875270843506,
+      "cloud_fraction": 0.34034520387649536
+    },
+    {
+      "date": "2021-06-29T00:00:00",
+      "rows": 1511,
+      "pixels": 1511,
+      "lst_mean_c": 37.688232421875,
+      "lst_std_c": 2.970705986022949,
+      "cloud_fraction": 0.18500539660453796
+    },
+    {
+      "date": "2021-08-16T00:00:00",
+      "rows": 1352,
+      "pixels": 1352,
+      "lst_mean_c": 36.78301239013672,
+      "lst_std_c": 3.0808234214782715,
+      "cloud_fraction": 0.27076590061187744
+    },
+    {
+      "date": "2022-06-16T00:00:00",
+      "rows": 1751,
+      "pixels": 1751,
+      "lst_mean_c": 34.271244049072266,
+      "lst_std_c": 3.0066964626312256,
+      "cloud_fraction": 0.0555555559694767
+    },
+    {
+      "date": "2022-07-18T00:00:00",
+      "rows": 1538,
+      "pixels": 1538,
+      "lst_mean_c": 37.9813232421875,
+      "lst_std_c": 3.095892906188965,
+      "cloud_fraction": 0.17044228315353394
+    },
+    {
+      "date": "2022-08-19T00:00:00",
+      "rows": 1566,
+      "pixels": 1566,
+      "lst_mean_c": 38.250892639160156,
+      "lst_std_c": 3.027815103530884,
+      "cloud_fraction": 0.1553398072719574
+    },
+    {
+      "date": "2023-06-03T00:00:00",
+      "rows": 1285,
+      "pixels": 1285,
+      "lst_mean_c": 34.21162414550781,
+      "lst_std_c": 2.810499429702759,
+      "cloud_fraction": 0.30690398812294006
+    },
+    {
+      "date": "2023-07-21T00:00:00",
+      "rows": 1538,
+      "pixels": 1538,
+      "lst_mean_c": 37.74607467651367,
+      "lst_std_c": 2.8914897441864014,
+      "cloud_fraction": 0.17044228315353394
+    },
+    {
+      "date": "2023-08-22T00:00:00",
+      "rows": 1223,
+      "pixels": 1223,
+      "lst_mean_c": 37.44186782836914,
+      "lst_std_c": 3.0068414211273193,
+      "cloud_fraction": 0.34034520387649536
+    },
+    {
+      "date": "2024-06-21T00:00:00",
+      "rows": 1223,
+      "pixels": 1223,
+      "lst_mean_c": 35.23251724243164,
+      "lst_std_c": 3.217597007751465,
+      "cloud_fraction": 0.34034520387649536
+    },
+    {
+      "date": "2024-07-23T00:00:00",
+      "rows": 1522,
+      "pixels": 1522,
+      "lst_mean_c": 38.952754974365234,
+      "lst_std_c": 3.1840569972991943,
+      "cloud_fraction": 0.1790722757577896
+    },
+    {
+      "date": "2024-08-24T00:00:00",
+      "rows": 1254,
+      "pixels": 1254,
+      "lst_mean_c": 39.32179260253906,
+      "lst_std_c": 3.1614956855773926,
+      "cloud_fraction": 0.3236245810985565
+    },
+    {
+      "date": "2025-06-08T00:00:00",
+      "rows": 1418,
+      "pixels": 1418,
+      "lst_mean_c": 38.75269317626953,
+      "lst_std_c": 2.9384148120880127,
+      "cloud_fraction": 0.23516720533370972
+    },
+    {
+      "date": "2025-07-26T00:00:00",
+      "rows": 1223,
+      "pixels": 1223,
+      "lst_mean_c": 37.67890930175781,
+      "lst_std_c": 2.914799213409424,
+      "cloud_fraction": 0.34034520387649536
+    },
+    {
+      "date": "2025-08-27T00:00:00",
+      "rows": 1363,
+      "pixels": 1363,
+      "lst_mean_c": 34.36745834350586,
+      "lst_std_c": 3.0025837421417236,
+      "cloud_fraction": 0.2648327946662903
+    }
+  ]
+}

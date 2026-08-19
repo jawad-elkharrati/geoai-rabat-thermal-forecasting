@@ -1,0 +1,24 @@
+variable,dtype,unit,role,source,description
+pixel_id,string,-,identifier,reference grid,stable pixel identifier
+date,date,-,group,Landsat,satellite observation date
+x_m,float64,m,location,reference grid,UTM 29N easting
+y_m,float64,m,location,reference grid,UTM 29N northing
+lon,float64,degree,location,reference grid,WGS84 longitude
+lat,float64,degree,location,reference grid,WGS84 latitude
+elevation_m,float32,m,feature,Copernicus DEM,terrain elevation
+slope_deg,float32,degree,feature,DEM derived,terrain slope
+ndvi,float32,-1..1,feature,Sentinel-2,vegetation index
+ndbi,float32,-1..1,feature,Sentinel-2,built-up index
+building_density,float32,0..1,feature,OSM,building density
+road_density,float32,0..1,feature,OSM,road density
+impervious_fraction,float32,0..1,feature,Sentinel-2/OSM,impervious surface fraction
+distance_to_water_m,float32,m,feature,OSM,distance to water
+distance_to_park_m,float32,m,feature,OSM,distance to green area
+air_temperature_c,float32,degC,feature,ERA5-Land,air temperature near overpass
+relative_humidity_pct,float32,%,feature,ERA5-Land,relative humidity
+wind_speed_ms,float32,m/s,feature,ERA5-Land,10 m wind speed
+shortwave_radiation_wm2,float32,W/m2,feature,ERA5-Land,shortwave radiation
+day_of_year_sin,float32,-,feature,date,annual seasonality sine
+day_of_year_cos,float32,-,feature,date,annual seasonality cosine
+landsat_cloud_fraction,float32,0..1,quality,Landsat QA,scene invalid fraction
+lst_c,float32,degC,target,Landsat ST,daytime land surface temperature

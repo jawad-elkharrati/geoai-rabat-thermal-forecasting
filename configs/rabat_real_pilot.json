@@ -1,0 +1,41 @@
+{
+  "name": "Rabat real-data pilot",
+  "bbox_wgs84": [-6.89, 33.94, -6.82, 34.01],
+  "boundary_path": "data/raw/samples/boundaries/rabat_commune.geojson",
+  "crs": "EPSG:32629",
+  "resolution_m": 30,
+  "landsat": {
+    "collection": "landsat-c2-l2",
+    "datetime": "2019-05-01/2025-09-30",
+    "max_cloud_percent": 20,
+    "max_dates": 14,
+    "months": [5, 6, 7, 8, 9]
+  },
+  "sentinel2": {
+    "collection": "sentinel-2-l2a",
+    "datetime": "2024-06-01/2024-09-30",
+    "max_cloud_percent": 10
+  },
+  "dem": {
+    "collection": "cop-dem-glo-30"
+  },
+  "weather": {
+    "timezone": "Africa/Casablanca",
+    "overpass_hour_local": 11,
+    "model": "era5_land"
+  },
+  "paths": {
+    "raw": "data/raw/real",
+    "interim": "data/interim/real",
+    "processed": "data/processed/real",
+    "artifacts": "artifacts/real_week5",
+    "final_artifacts": "artifacts/final",
+    "figures": "reports/figures/real",
+    "final_figures": "reports/figures/final",
+    "prediction_rasters": "output/rasters",
+    "report_pdf": "output/pdf/rapport_court_semaines_1_5_donnees_reelles.pdf",
+    "final_report_pdf": "output/pdf/rapport_final_geoai_rabat.pdf",
+    "defense_guide_pdf": "output/pdf/guide_complet_soutenance_geoai_rabat.pdf",
+    "presentation_pptx": "output/presentation/presentation_finale_geoai_rabat.pptx"
+  }
+}

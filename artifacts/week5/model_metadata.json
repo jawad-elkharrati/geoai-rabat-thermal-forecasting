@@ -1,0 +1,47 @@
+{
+  "stage": "week5_preliminary",
+  "selected_model": "linear_regression",
+  "selection_metric": "validation_mae_c",
+  "selected_metrics": {
+    "model": "linear_regression",
+    "mae_c": 0.6741232513809436,
+    "rmse_c": 0.8473737869852402,
+    "r2": 0.941471884172867,
+    "is_baseline": false,
+    "gain_vs_global_baseline_pct": 78.07776233649095
+  },
+  "dataset_kind": "synthetic_geospatial_demo",
+  "test_scored": false,
+  "features": [
+    "elevation_m",
+    "slope_deg",
+    "ndvi",
+    "ndbi",
+    "building_density",
+    "road_density",
+    "impervious_fraction",
+    "distance_to_water_m",
+    "distance_to_park_m",
+    "air_temperature_c",
+    "relative_humidity_pct",
+    "wind_speed_ms",
+    "shortwave_radiation_wm2",
+    "day_of_year_sin",
+    "day_of_year_cos"
+  ],
+  "target": "lst_c",
+  "rows": {
+    "train": 17718,
+    "validation": 5417,
+    "test_reserved": 2586,
+    "development_refit": 23135
+  },
+  "created_at_utc": "2026-07-27T13:31:04.536083+00:00",
+  "runtime": {
+    "python": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "pandas": "3.0.1",
+    "numpy": "2.3.5",
+    "model_runtime": "geoai_rabat.lite_models (NumPy)"
+  }
+}

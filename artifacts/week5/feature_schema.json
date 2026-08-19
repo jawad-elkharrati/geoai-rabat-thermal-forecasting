@@ -1,0 +1,23 @@
+{
+  "features_in_order": [
+    "elevation_m",
+    "slope_deg",
+    "ndvi",
+    "ndbi",
+    "building_density",
+    "road_density",
+    "impervious_fraction",
+    "distance_to_water_m",
+    "distance_to_park_m",
+    "air_temperature_c",
+    "relative_humidity_pct",
+    "wind_speed_ms",
+    "shortwave_radiation_wm2",
+    "day_of_year_sin",
+    "day_of_year_cos"
+  ],
+  "target": "lst_c",
+  "date_column": "date",
+  "crs": "EPSG:32629",
+  "resolution_m": 30
+}

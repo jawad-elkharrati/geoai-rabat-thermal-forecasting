@@ -1,0 +1,88 @@
+{
+  "stage": "week5",
+  "created_at_utc": "2026-07-27T13:31:04.732503+00:00",
+  "selected_model": "linear_regression",
+  "test_scored": false,
+  "files": [
+    {
+      "path": "artifacts/week5/feature_importance.csv",
+      "source_id": "week5_training",
+      "generated": true,
+      "bytes": 931,
+      "sha256": "376b3d4e4ac14cfa15dc8a8cde2f4e28b2802c0e7974769234c911965c728933",
+      "recorded_at_utc": "2026-07-27T13:31:04.742663+00:00"
+    },
+    {
+      "path": "artifacts/week5/feature_importance.png",
+      "source_id": "week5_training",
+      "generated": true,
+      "bytes": 28207,
+      "sha256": "3033eba0ad7b545b51ae7916ac07a02b1977dc7dcfe86ee8e8edd3a13d7f6178",
+      "recorded_at_utc": "2026-07-27T13:31:04.757818+00:00"
+    },
+    {
+      "path": "artifacts/week5/feature_schema.json",
+      "source_id": "week5_training",
+      "generated": true,
+      "bytes": 482,
+      "sha256": "79549b47e2d7d7d2c0c2363b45eb1241df7523f71d900d9ef970aad74e1df490",
+      "recorded_at_utc": "2026-07-27T13:31:04.759799+00:00"
+    },
+    {
+      "path": "artifacts/week5/metrics_validation.csv",
+      "source_id": "week5_training",
+      "generated": true,
+      "bytes": 552,
+      "sha256": "73995f8c73231c6eb33dfd24ff01132b3c2af8c09b9b98039846f8c429c29cda",
+      "recorded_at_utc": "2026-07-27T13:31:04.773151+00:00"
+    },
+    {
+      "path": "artifacts/week5/metrics_validation.png",
+      "source_id": "week5_training",
+      "generated": true,
+      "bytes": 15326,
+      "sha256": "6a937945827e9cdb4d77cc9f52500dae64ab5301f2732e7d7a7b6c2d668afdf5",
+      "recorded_at_utc": "2026-07-27T13:31:04.785293+00:00"
+    },
+    {
+      "path": "artifacts/week5/MODEL_CARD.md",
+      "source_id": "week5_training",
+      "generated": true,
+      "bytes": 1429,
+      "sha256": "e5e22e1e84e50d40cf4feb55f31965f43ef55557016f8be148e056a8bd3793d9",
+      "recorded_at_utc": "2026-07-27T13:31:04.800455+00:00"
+    },
+    {
+      "path": "artifacts/week5/model_metadata.json",
+      "source_id": "week5_training",
+      "generated": true,
+      "bytes": 1274,
+      "sha256": "3adc0a006813dc610eca736dc2490fe5f8b54988e27798a569f609ed2525560e",
+      "recorded_at_utc": "2026-07-27T13:31:04.814716+00:00"
+    },
+    {
+      "path": "artifacts/week5/model_week5.pkl",
+      "source_id": "week5_training",
+      "generated": true,
+      "bytes": 830,
+      "sha256": "72fc29279cee565abf9276e98ee5a14908770b13ef8ed2f68f6296dca7d0e38c",
+      "recorded_at_utc": "2026-07-27T13:31:04.845588+00:00"
+    },
+    {
+      "path": "artifacts/week5/splits.json",
+      "source_id": "week5_training",
+      "generated": true,
+      "bytes": 417,
+      "sha256": "609e9f04216c1e5b1b16c301c25a0bb2818aec13b5c7dc5ece6337e45845103d",
+      "recorded_at_utc": "2026-07-27T13:31:04.847588+00:00"
+    },
+    {
+      "path": "artifacts/week5/validation_predictions.parquet",
+      "source_id": "week5_training",
+      "generated": true,
+      "bytes": 105351,
+      "sha256": "69e02b7d1eef6d50a6445c541fa96f9defe9269f823f3fc749d9e9af5da2acc0",
+      "recorded_at_utc": "2026-07-27T13:31:04.865743+00:00"
+    }
+  ]
+}

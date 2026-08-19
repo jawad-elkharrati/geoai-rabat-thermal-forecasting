@@ -1,0 +1,42 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local configuration and logs
+.env
+.env.*
+*.log
+tmp/
+
+# Downloaded and generated geospatial data
+data/raw/real/
+data/raw/downloads/
+data/interim/
+data/processed/real/
+data/processed/*.parquet
+
+# Generated binary model outputs
+artifacts/**/*.pkl
+artifacts/**/*.parquet
+artifacts/**/*.png
+
+# Generated maps and rasters
+output/rasters/
+reports/figures/
+
+# Inspection and temporary document files
+output/presentation/*.inspect.ndjson
+~$*.pptx
+~$*.docx

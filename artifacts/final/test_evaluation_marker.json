@@ -1,0 +1,16 @@
+{
+  "opened_at_utc": "2026-08-10T17:51:42.030513+00:00",
+  "dates": [
+    "2025-06-15",
+    "2025-07-25"
+  ],
+  "model_file": {
+    "path": "artifacts/real_week5/model_real_week5.pkl",
+    "source_id": "week5_frozen_model",
+    "generated": true,
+    "bytes": 508710,
+    "sha256": "61af2c376df8dbec59d6e843e3d082a87d8cfe2a1d5f12972dbf5a5bc4ccf46b",
+    "recorded_at_utc": "2026-08-10T17:51:42.076509+00:00"
+  },
+  "policy": "Evaluation unique, aucun réentraînement après ouverture du test."
+}
