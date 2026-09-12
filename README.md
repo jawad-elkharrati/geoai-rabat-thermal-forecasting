@@ -1,22 +1,91 @@
 # GeoAI Rabat
 
-Pipeline géospatial pour cartographier et prévoir la température de surface terrestre à Rabat à partir de données satellitaires, urbaines et météorologiques.
+Ce projet est parti d’une question simple : **peut-on utiliser les images satellites et la météo pour repérer les zones les plus chaudes de Rabat, puis estimer leur température de surface pour les deux jours suivants ?**
 
-## Objectif
+Le pipeline rassemble plusieurs sources géospatiales, les ramène sur une grille commune de 30 mètres, construit un jeu de données pixel-date et compare plusieurs modèles. Le résultat final est une paire de cartes GeoTIFF à J+1 et J+2.
 
-Le projet construit une grille de 30 mètres sur une zone pilote de Rabat, rassemble les variables utiles pour chaque pixel et chaque date, puis entraîne plusieurs modèles de régression. Le modèle retenu produit des cartes de température de surface à J+1 et J+2.
+> Ici, on prédit la **température de surface terrestre (LST)**. Ce n’est pas la température de l’air annoncée dans les applications météo.
 
-La variable cible est la **LST** (*Land Surface Temperature*), c’est-à-dire la température de la surface observée par satellite. Elle ne doit pas être confondue avec la température de l’air mesurée par une station météo.
+## Aperçu du travail
 
-## Données utilisées
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="docs/images/sentinel2-zone-pilote.jpg" alt="Composition Sentinel-2 de la zone pilote" />
+      <br /><sub>Composition Sentinel-2 de la zone pilote</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="docs/images/landsat-lst-reelle.jpg" alt="Température de surface Landsat observée" />
+      <br /><sub>LST réellement observée par Landsat</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="docs/images/comparaison-modeles.png" alt="Comparaison des modèles de régression" />
+      <br /><sub>Comparaison des modèles pendant la validation</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="docs/images/prevision-lst-j1.jpg" alt="Carte de prévision LST à J+1" />
+      <br /><sub>Exemple de carte prévisionnelle à J+1</sub>
+    </td>
+  </tr>
+</table>
 
-- Landsat Collection 2 Level-2 pour la LST et le masque qualité ;
-- Sentinel-2 pour les indices de végétation et de bâti ;
-- Copernicus DEM pour l’altitude et la pente ;
-- OpenStreetMap pour les densités de bâtiments et de routes ;
-- ERA5-Land et Open-Meteo pour les variables météorologiques.
+## Comment fonctionne le pipeline ?
 
-Toutes les couches sont reprojetées en `EPSG:32629` et alignées sur la même grille avant la construction de la table pixel-date.
+```mermaid
+flowchart LR
+    A["Landsat<br/>LST + qualité"]
+    B["Sentinel-2<br/>végétation + bâti"]
+    C["Copernicus DEM<br/>altitude + pente"]
+    D["OpenStreetMap<br/>routes + bâtiments"]
+    E["ERA5 / Open-Meteo<br/>météo"]
+
+    A --> F["Nettoyage et masque nuage"]
+    B --> F
+    C --> F
+    D --> F
+    E --> F
+
+    F --> G["Reprojection EPSG:32629<br/>grille commune de 30 m"]
+    G --> H["Table pixel × date"]
+    H --> I["Séparation temporelle<br/>entraînement / validation / test"]
+    I --> J["Comparaison des baselines<br/>et modèles ML"]
+    J --> K["Random Forest retenue"]
+    K --> L["Cartes LST<br/>J+1 et J+2"]
+```
+
+### Une ligne du jeu de données
+
+Chaque ligne correspond à un pixel observé à une date donnée. Les colonnes décrivent son environnement et les conditions météorologiques de cette date.
+
+```mermaid
+flowchart TB
+    P["Identité<br/>pixel_id, x, y, date"]
+    S["Satellite<br/>NDVI, NDBI, albédo, LST passée"]
+    U["Ville et relief<br/>bâtiments, routes, altitude, pente"]
+    M["Météo<br/>température, humidité, vent, rayonnement"]
+    T["Cible<br/>LST en °C"]
+
+    P --> R["Observation pixel-date"]
+    S --> R
+    U --> R
+    M --> R
+    R --> T
+```
+
+## Données mobilisées
+
+| Source | Utilisation dans le projet |
+|---|---|
+| Landsat Collection 2 Level-2 | LST cible et masque qualité `QA_PIXEL` |
+| Sentinel-2 | Indices de végétation et de bâti |
+| Copernicus DEM | Altitude et pente |
+| OpenStreetMap | Densité des bâtiments et des routes |
+| ERA5-Land | Historique météorologique aux dates Landsat |
+| Open-Meteo | Variables météorologiques pour J+1 et J+2 |
+
+Toutes les couches sont reprojetées en `EPSG:32629` et alignées sur la même emprise avant leur fusion.
 
 ## Résultats du pilote
 
@@ -31,63 +100,78 @@ Toutes les couches sont reprojetées en `EPSG:32629` et alignées sur la même g
 | RMSE du Random Forest | 1,831 °C |
 | R² du Random Forest | 0,237 |
 
-La séparation est temporelle : les dates de test ne sont jamais utilisées pendant l’entraînement ni pendant le choix du modèle. Sur ce pilote, le Random Forest obtient une MAE de 1,416 °C sur le test final, contre 1,497 °C pour la baseline saisonnière.
+La séparation du jeu de données est **temporelle** : les deux dates de test restent inconnues jusqu’à l’évaluation finale. Sur ce test, la Random Forest atteint une MAE de 1,416 °C, contre 1,497 °C pour la baseline saisonnière.
 
-## Organisation du dépôt
+Le résultat est encourageant pour une étude pilote, mais le R² et le biais montrent qu’il faut davantage de dates et une zone d’étude plus large avant d’envisager un usage opérationnel.
+
+## Structure du dépôt
 
 ```text
-configs/                 paramètres du pipeline
-src/geoai_rabat/         collecte, préparation, modélisation et prévision
-tests/                   tests unitaires et d’intégration
-data/raw/samples/        petits échantillons reproductibles
-data/processed/          dictionnaire et échantillon CSV de démonstration
-artifacts/               métriques, schémas et fiches modèles
-docs/                    notes méthodologiques détaillées
+configs/                 paramètres de la zone et des traitements
+src/geoai_rabat/         code de collecte, préparation et modélisation
+tests/                   tests unitaires et tests de livraison complète
+data/raw/samples/        petits échantillons conservés dans Git
+data/processed/          dictionnaire et extrait CSV de démonstration
+artifacts/               métriques, splits et fiches des modèles
+docs/                    choix méthodologiques et bilan des étapes
+scripts/                 commandes PowerShell pour lancer le pipeline
 ```
 
-Les données satellitaires brutes, les rasters intermédiaires, les tables Parquet, les modèles sérialisés et les cartes générées ne sont pas versionnés. Ils sont volumineux et sont reconstruits localement par le pipeline.
+Les images satellites brutes, les rasters intermédiaires, les tables Parquet et les modèles sérialisés ne sont pas stockés dans Git. Ils sont lourds et peuvent être reconstruits avec le pipeline.
 
 ## Installation
 
-Python 3.10 ou une version plus récente est nécessaire.
+Le projet fonctionne avec Python 3.10 ou une version plus récente.
 
 ```powershell
 git clone https://github.com/jawad-elkharrati/geoai-rabat-thermal-forecasting.git
 cd geoai-rabat-thermal-forecasting
+
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install -r requirements-real.txt
 ```
 
-## Exécution
+## Lancer le projet
 
-Pour lancer le pipeline complet sous Windows :
+Sous Windows, le script suivant enchaîne la préparation, l’entraînement, l’évaluation, les prévisions et les contrôles :
 
 ```powershell
 .\scripts\run_complete.ps1
 ```
 
-Les principales vérifications peuvent aussi être exécutées séparément :
+Pour lancer seulement les tests légers :
 
 ```powershell
 python -m pytest -m "not integration"
+```
+
+Une fois les données et les modèles générés, les contrôles complets deviennent disponibles :
+
+```powershell
 python -m geoai_rabat.cli verify-real --config configs/rabat_real_pilot.json
 python -m geoai_rabat.cli verify-final --config configs/rabat_real_pilot.json
 python -m geoai_rabat.cli verify-delivery --config configs/rabat_real_pilot.json
+python -m pytest -m integration
 ```
 
-La première exécution du pipeline réel télécharge les données nécessaires et peut prendre du temps selon la connexion et la machine utilisée.
-Les deux tests marqués `integration` contrôlent la livraison locale complète et nécessitent les données et modèles générés. Ils peuvent être lancés après le pipeline avec `python -m pytest -m integration`.
+La première exécution réelle télécharge plusieurs sources externes. Sa durée dépend donc de la connexion et de la machine.
 
-## Livrables
+## Où regarder dans le projet ?
 
+- [Cadrage et question de recherche](docs/01_cadrage.md)
+- [Inventaire des sources](docs/02_sources.md)
+- [Méthode de modélisation](docs/05_modelisation.md)
+- [Validation finale](docs/07_validation_finale.md)
+- [Prévisions J+1 et J+2](docs/08_previsions_j1_j2.md)
 - [Fiche du modèle final](artifacts/final/MODEL_CARD_FINAL.md)
-- [Résultats du test final](artifacts/final/test_metrics_final.json)
-- [Documentation méthodologique](docs/)
+- [Métriques du test final](artifacts/final/test_metrics_final.json)
 
-Après l’exécution, les prévisions GeoTIFF sont écrites dans `output/rasters/` et les cartes PNG dans `reports/figures/`.
+## Limites connues
 
-## Limites
-
-Il s’agit d’une étude pilote sur une partie de Rabat. Les variables Sentinel-2 et urbaines sont considérées comme statiques, tandis que la météo prévisionnelle est extraite au point central de la zone. Les cartes produites servent à l’analyse géospatiale et ne constituent pas un système officiel d’alerte sanitaire.
+- La zone étudiée est une zone pilote et non toute la commune de Rabat.
+- Le nombre de dates Landsat reste limité par la couverture nuageuse et la fréquence de passage.
+- Les variables Sentinel-2 et urbaines sont considérées comme statiques dans cette version.
+- La météo prévisionnelle est extraite au point central de la zone.
+- Les cartes sont un outil d’analyse géospatiale, pas un dispositif officiel d’alerte sanitaire.
