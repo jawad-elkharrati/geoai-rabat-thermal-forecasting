@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" role="img" aria-labelledby="title desc">
+  <title id="title">Pipeline GeoAI Rabat</title>
+  <desc id="desc">Les données Landsat, Sentinel-2, Copernicus DEM, OpenStreetMap et météo sont préparées, alignées, fusionnées, utilisées pour entraîner un modèle puis produire des cartes LST à J+1 et J+2.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef6ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#34506f"/>
+    </marker>
+    <style>
+      .title { font: 700 29px Arial, sans-serif; fill: #102a43; }
+      .step { font: 700 17px Arial, sans-serif; fill: #ffffff; }
+      .label { font: 700 18px Arial, sans-serif; fill: #17324d; }
+      .detail { font: 400 15px Arial, sans-serif; fill: #52677d; }
+      .source { fill: #ffffff; stroke: #4f82b8; stroke-width: 2; }
+      .process { fill: #ffffff; stroke: #168aad; stroke-width: 2.5; }
+      .model { fill: #ffffff; stroke: #e67e22; stroke-width: 2.5; }
+      .result { fill: #ffffff; stroke: #d64545; stroke-width: 2.5; }
+      .arrow { fill: none; stroke: #34506f; stroke-width: 2.5; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1400" height="650" rx="24" fill="url(#background)"/>
+  <text x="700" y="48" text-anchor="middle" class="title">Des données brutes aux cartes de température de surface</text>
+
+  <rect x="42" y="86" width="245" height="78" rx="14" class="source"/>
+  <text x="64" y="116" class="label">Landsat</text>
+  <text x="64" y="142" class="detail">LST et masque qualité</text>
+
+  <rect x="42" y="178" width="245" height="78" rx="14" class="source"/>
+  <text x="64" y="208" class="label">Sentinel-2</text>
+  <text x="64" y="234" class="detail">Végétation et bâti</text>
+
+  <rect x="42" y="270" width="245" height="78" rx="14" class="source"/>
+  <text x="64" y="300" class="label">Copernicus DEM</text>
+  <text x="64" y="326" class="detail">Altitude et pente</text>
+
+  <rect x="42" y="362" width="245" height="78" rx="14" class="source"/>
+  <text x="64" y="392" class="label">OpenStreetMap</text>
+  <text x="64" y="418" class="detail">Routes et bâtiments</text>
+
+  <rect x="42" y="454" width="245" height="78" rx="14" class="source"/>
+  <text x="64" y="484" class="label">ERA5 / Open-Meteo</text>
+  <text x="64" y="510" class="detail">Historique et prévisions météo</text>
+
+  <path d="M287 125 C330 125 330 292 365 292" class="arrow"/>
+  <path d="M287 217 C330 217 330 292 365 292" class="arrow"/>
+  <path d="M287 309 C330 309 330 292 365 292" class="arrow"/>
+  <path d="M287 401 C330 401 330 292 365 292" class="arrow"/>
+  <path d="M287 493 C330 493 330 292 365 292" class="arrow"/>
+
+  <rect x="376" y="224" width="210" height="138" rx="18" class="process"/>
+  <rect x="376" y="224" width="210" height="38" rx="18" fill="#168aad"/>
+  <rect x="376" y="244" width="210" height="18" fill="#168aad"/>
+  <text x="481" y="250" text-anchor="middle" class="step">1 · PRÉPARER</text>
+  <text x="481" y="294" text-anchor="middle" class="label">Nettoyage</text>
+  <text x="481" y="322" text-anchor="middle" class="detail">nuages · qualité</text>
+  <text x="481" y="345" text-anchor="middle" class="detail">indices · densités</text>
+
+  <path d="M586 293 H625" class="arrow"/>
+
+  <rect x="637" y="224" width="210" height="138" rx="18" class="process"/>
+  <rect x="637" y="224" width="210" height="38" rx="18" fill="#168aad"/>
+  <rect x="637" y="244" width="210" height="18" fill="#168aad"/>
+  <text x="742" y="250" text-anchor="middle" class="step">2 · ALIGNER</text>
+  <text x="742" y="294" text-anchor="middle" class="label">EPSG:32629</text>
+  <text x="742" y="322" text-anchor="middle" class="detail">grille commune</text>
+  <text x="742" y="345" text-anchor="middle" class="detail">résolution 30 m</text>
+
+  <path d="M847 293 H886" class="arrow"/>
+
+  <rect x="898" y="224" width="210" height="138" rx="18" class="process"/>
+  <rect x="898" y="224" width="210" height="38" rx="18" fill="#168aad"/>
+  <rect x="898" y="244" width="210" height="18" fill="#168aad"/>
+  <text x="1003" y="250" text-anchor="middle" class="step">3 · FUSIONNER</text>
+  <text x="1003" y="294" text-anchor="middle" class="label">Pixel × date</text>
+  <text x="1003" y="322" text-anchor="middle" class="detail">748 120 lignes</text>
+  <text x="1003" y="345" text-anchor="middle" class="detail">15 variables</text>
+
+  <path d="M1108 293 H1147" class="arrow"/>
+
+  <rect x="1159" y="154" width="200" height="138" rx="18" class="model"/>
+  <rect x="1159" y="154" width="200" height="38" rx="18" fill="#e67e22"/>
+  <rect x="1159" y="174" width="200" height="18" fill="#e67e22"/>
+  <text x="1259" y="180" text-anchor="middle" class="step">4 · MODÉLISER</text>
+  <text x="1259" y="224" text-anchor="middle" class="label">Random Forest</text>
+  <text x="1259" y="252" text-anchor="middle" class="detail">séparation temporelle</text>
+  <text x="1259" y="275" text-anchor="middle" class="detail">MAE : 1,416 °C</text>
+
+  <path d="M1259 292 V350" class="arrow"/>
+
+  <rect x="1159" y="363" width="200" height="138" rx="18" class="result"/>
+  <rect x="1159" y="363" width="200" height="38" rx="18" fill="#d64545"/>
+  <rect x="1159" y="383" width="200" height="18" fill="#d64545"/>
+  <text x="1259" y="389" text-anchor="middle" class="step">5 · CARTOGRAPHIER</text>
+  <text x="1259" y="433" text-anchor="middle" class="label">Prévisions LST</text>
+  <text x="1259" y="461" text-anchor="middle" class="detail">GeoTIFF J+1 et J+2</text>
+  <text x="1259" y="484" text-anchor="middle" class="detail">+ liste des hotspots</text>
+
+  <rect x="376" y="567" width="983" height="48" rx="12" fill="#e8f2fc" stroke="#8bb5df"/>
+  <text x="868" y="597" text-anchor="middle" class="detail">Même emprise · même projection · même résolution : les couches sont comparables pixel par pixel.</text>
+</svg>

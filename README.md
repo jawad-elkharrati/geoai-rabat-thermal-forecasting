@@ -33,46 +33,17 @@ Le pipeline rassemble plusieurs sources géospatiales, les ramène sur une grill
 
 ## Comment fonctionne le pipeline ?
 
-```mermaid
-flowchart LR
-    A["Landsat<br/>LST + qualité"]
-    B["Sentinel-2<br/>végétation + bâti"]
-    C["Copernicus DEM<br/>altitude + pente"]
-    D["OpenStreetMap<br/>routes + bâtiments"]
-    E["ERA5 / Open-Meteo<br/>météo"]
-
-    A --> F["Nettoyage et masque nuage"]
-    B --> F
-    C --> F
-    D --> F
-    E --> F
-
-    F --> G["Reprojection EPSG:32629<br/>grille commune de 30 m"]
-    G --> H["Table pixel × date"]
-    H --> I["Séparation temporelle<br/>entraînement / validation / test"]
-    I --> J["Comparaison des baselines<br/>et modèles ML"]
-    J --> K["Random Forest retenue"]
-    K --> L["Cartes LST<br/>J+1 et J+2"]
-```
+<p align="center">
+  <img src="docs/images/pipeline-geoai.svg" alt="Schéma complet du pipeline GeoAI Rabat" />
+</p>
 
 ### Une ligne du jeu de données
 
 Chaque ligne correspond à un pixel observé à une date donnée. Les colonnes décrivent son environnement et les conditions météorologiques de cette date.
 
-```mermaid
-flowchart TB
-    P["Identité<br/>pixel_id, x, y, date"]
-    S["Satellite<br/>NDVI, NDBI, albédo, LST passée"]
-    U["Ville et relief<br/>bâtiments, routes, altitude, pente"]
-    M["Météo<br/>température, humidité, vent, rayonnement"]
-    T["Cible<br/>LST en °C"]
-
-    P --> R["Observation pixel-date"]
-    S --> R
-    U --> R
-    M --> R
-    R --> T
-```
+<p align="center">
+  <img src="docs/images/schema-pixel-date.svg" alt="Schéma d’une observation pixel-date" />
+</p>
 
 ## Données mobilisées
 

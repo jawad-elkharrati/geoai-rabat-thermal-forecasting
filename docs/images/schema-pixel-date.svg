@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Composition d’une observation pixel-date</title>
+  <desc id="desc">L’identité du pixel, les variables satellites, les caractéristiques urbaines et de relief, et la météo sont réunies dans une observation dont la cible est la LST.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#f1f8f5"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#42617f"/>
+    </marker>
+    <style>
+      .title { font: 700 27px Arial, sans-serif; fill: #102a43; }
+      .heading { font: 700 17px Arial, sans-serif; fill: #17324d; }
+      .detail { font: 400 14px Arial, sans-serif; fill: #52677d; }
+      .box { fill: #ffffff; stroke: #6b97bd; stroke-width: 2; }
+      .observation { fill: #eaf7f1; stroke: #2a9d6f; stroke-width: 3; }
+      .target { fill: #fff1e6; stroke: #e67e22; stroke-width: 3; }
+      .arrow { fill: none; stroke: #42617f; stroke-width: 2.5; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" rx="24" fill="url(#background)"/>
+  <text x="600" y="48" text-anchor="middle" class="title">Que contient une ligne du jeu de données ?</text>
+
+  <rect x="40" y="92" width="250" height="108" rx="16" class="box"/>
+  <text x="165" y="126" text-anchor="middle" class="heading">Identité du pixel</text>
+  <text x="165" y="155" text-anchor="middle" class="detail">pixel_id · x · y</text>
+  <text x="165" y="178" text-anchor="middle" class="detail">date d’observation</text>
+
+  <rect x="330" y="92" width="250" height="108" rx="16" class="box"/>
+  <text x="455" y="126" text-anchor="middle" class="heading">Satellite</text>
+  <text x="455" y="155" text-anchor="middle" class="detail">NDVI · NDBI · albédo</text>
+  <text x="455" y="178" text-anchor="middle" class="detail">LST passée</text>
+
+  <rect x="620" y="92" width="250" height="108" rx="16" class="box"/>
+  <text x="745" y="126" text-anchor="middle" class="heading">Ville et relief</text>
+  <text x="745" y="155" text-anchor="middle" class="detail">bâtiments · routes</text>
+  <text x="745" y="178" text-anchor="middle" class="detail">altitude · pente</text>
+
+  <rect x="910" y="92" width="250" height="108" rx="16" class="box"/>
+  <text x="1035" y="126" text-anchor="middle" class="heading">Météo</text>
+  <text x="1035" y="155" text-anchor="middle" class="detail">température · humidité</text>
+  <text x="1035" y="178" text-anchor="middle" class="detail">vent · rayonnement</text>
+
+  <path d="M165 200 C165 280 390 276 470 316" class="arrow"/>
+  <path d="M455 200 C455 250 500 272 530 316" class="arrow"/>
+  <path d="M745 200 C745 250 700 272 670 316" class="arrow"/>
+  <path d="M1035 200 C1035 280 810 276 730 316" class="arrow"/>
+
+  <rect x="445" y="324" width="310" height="112" rx="20" class="observation"/>
+  <text x="600" y="365" text-anchor="middle" class="heading">Observation pixel-date</text>
+  <text x="600" y="395" text-anchor="middle" class="detail">une ligne cohérente et géoréférencée</text>
+  <text x="600" y="418" text-anchor="middle" class="detail">utilisée par les modèles de régression</text>
+
+  <path d="M755 380 H850" class="arrow"/>
+
+  <rect x="862" y="324" width="250" height="112" rx="20" class="target"/>
+  <text x="987" y="365" text-anchor="middle" class="heading">Variable cible</text>
+  <text x="987" y="398" text-anchor="middle" class="detail">LST en °C</text>
+  <text x="987" y="421" text-anchor="middle" class="detail">température de surface</text>
+</svg>
